@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MineSweeper"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_gravity="center_horizontal"
+            android:onClick="startGame"/>
+        <Button
+            android:id="@+id/btn_play_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:onClick="playAgain"/>
+        <Button
+            android:id="@+id/btn_flag_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚩 Mark"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="8"
+            android:visibility="gone"
+            android:verticalSpacing="2dp"
+            android:horizontalSpacing="2dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_start"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="00:00"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
